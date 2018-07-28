@@ -1,6 +1,6 @@
 {
   "name": "@b1kt0p/dotenv-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate dotenv file from AWS System Parameters template",
   "main": "./lib/index.js",
   "files": [
@@ -8,7 +8,7 @@
     "src"
   ],
   "bin": {
-    "dotenv-generator": "./bin/index.js"
+    "dotenv-generator": "./lib/index.js"
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src --out-dir lib",
