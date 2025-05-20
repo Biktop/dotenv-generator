@@ -1,6 +1,6 @@
 {
   "name": "@b1kt0p/dotenv-generator",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Generate dotenv file from AWS System Parameters template",
   "main": "./lib/index.js",
   "files": [
@@ -11,7 +11,7 @@
     "dotenv-generator": "./lib/index.js"
   },
   "scripts": {
-    "build": "BABEL_ENV=production babel src --out-dir lib",
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=lib/index.js",
     "prepublish": "rm -rf ./lib && npm run build"
   },
   "repository": {
@@ -29,12 +29,9 @@
   },
   "homepage": "https://github.com/Biktop/dotenv-generator#readme",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-preset-minify": "^0.5.1"
+    "esbuild": "^0.25.4"
   },
-  "peerDependencies": {
-    "aws-sdk": "^2.282.1"
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.812.0"
   }
 }
