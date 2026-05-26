@@ -1,6 +1,6 @@
 {
   "name": "@b1kt0p/dotenv-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generate dotenv file from AWS System Parameters template",
   "main": "./lib/index.js",
   "files": [
@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/Biktop/dotenv-generator#readme",
   "devDependencies": {
-    "esbuild": "^0.27.3"
+    "esbuild": "^0.28.0"
   },
-  "dependencies": {
-    "@aws-sdk/client-ssm": "^3.1000.0"
+  "peerDependencies": {
+    "@aws-sdk/client-ssm": "^3"
   }
 }
